@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteBase /BloomWebsite/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^san-pham/([0-9]+)$ pages/san-pham.php?id=$1 [QSA,L]
+RewriteRule ^chi-tiet-don-hang/([0-9]+)$ pages/chi-tiet-don-hang.php?id=$1 [QSA,L]
+
+RewriteRule ^tim-kiem$ pages/tim-kiem.php [QSA,L]
+RewriteRule ^tai-khoan$ pages/tai-khoan.php [QSA,L]
+RewriteRule ^admin$ pages/admin.php [QSA,L]
+RewriteRule ^gio-hang$ pages/gio-hang.php [QSA,L]
+RewriteRule ^xac-nhan-don-hang$ pages/xac-nhan-don-hang.php [QSA,L]
+RewriteRule ^thanh-toan$ pages/thanh-toan.php [QSA,L]
+
+RewriteRule ^hoa-sinh-nhat/(.*)$ pages/hoa-sinh-nhat/$1 [QSA,L]
+RewriteRule ^tai-khoan/(.+)$ pages/tai-khoan/$1.php [QSA,L]
+RewriteRule ^profile/([0-9]+)$ pages/tai-khoan/profile.php?id=$1 [QSA,L]
